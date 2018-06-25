@@ -18,4 +18,4 @@ mae = np.mean(np.abs(errs))
 print ("MAE: %.3f" % mae)
 
 mse = np.sqrt(np.mean(np.square(errs)))
-print ("MAE: %.3f" % mse)
+print ("MSE: %.3f" % mse)

@@ -41,7 +41,6 @@ The prediction result will be saved in the file *predict.txt*.
 - MXNet
 ```
 python test.py
-
 ```
 - Caffe 
 ```
