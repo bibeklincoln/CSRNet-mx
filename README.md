@@ -1,6 +1,7 @@
 # CSRNet
 This is the MXNet implementation for [CSRNet: Dilated Convolutional Neural Networks for Understanding the Highly Congested Scenes](https://arxiv.org/abs/1802.10062) in CVPR 2018.
-[Official Repo](https://github.com/leeyeehoo/CSRNet)
+
+[[Official Repo](https://github.com/leeyeehoo/CSRNet)]
 
 ## Datasets
 ShanghaiTech Dataset: [Google Drive](https://drive.google.com/open?id=16dhJn7k4FWVwByRsQAEpl9lwjuV03jVI)
@@ -32,6 +33,12 @@ data/
     ShanghaiTech/
         part_A_final/
         part_B_final/
+```
+
+## Evaluation
+```
+python test.py
+python evaluate.py
 ```
 
 ## References

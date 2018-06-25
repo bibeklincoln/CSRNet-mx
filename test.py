@@ -5,7 +5,7 @@ import symbol_csrnet
 from collections import namedtuple
 from mutableModule import MutableModule
 
-MEAN_COLOR = np.array([110.474, 118.574, 123.955]).reshape((3, 1, 1)) # BGR 
+MEAN_COLOR = np.array([103.939, 116.779, 123.68]).reshape((3, 1, 1)) # BGR
 
 def load_checkpoint(prefix, epoch):
     """
@@ -75,7 +75,7 @@ if __name__ == '__main__':
         ext = os.path.splitext(fname)[-1].lower()
         return ext == '.jpg'
     data_path = './data/ShanghaiTech/part_A_final/test_data/'
-    image_names = filter(is_image_file, os.listdir(os.path.join(data_path, 'images')))
+    image_names = list(filter(is_image_file, os.listdir(os.path.join(data_path, 'images'))))
 
     fout = open('predict.txt', 'w')
     num_images = len(image_names)
