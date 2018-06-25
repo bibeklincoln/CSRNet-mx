@@ -1,5 +1,6 @@
 # CSRNet
-This is the MXNet implementation for [CSRNet: Dilated Convolutional Neural Networks for Understanding the Highly Congested Scenes](https://arxiv.org/abs/1802.10062) in CVPR 2018.
+This is the **MXNet** implementation for [CSRNet: Dilated Convolutional Neural Networks for Understanding the Highly Congested Scenes](https://arxiv.org/abs/1802.10062) in CVPR 2018.
+And we also provide the **Caffe** implementation in this repo. :-)
 
 [[Official Repo](https://github.com/leeyeehoo/CSRNet)]
 
@@ -20,7 +21,7 @@ git clone https://github.com/wkcn/CSRNet-mx
 git submodule update --init --recursive
 ```
 
-## Convert Caffe Model to MXNet Model
+## Convert Caffe Model to MXNet Model (If using MXNet)
 Please install pycaffe for converting model
 Download the model to *models* directory.
 ```
@@ -35,9 +36,20 @@ data/
         part_B_final/
 ```
 
-## Evaluation
+## Prediction 
+The prediction result will be saved in the file *predict.txt*.
+- MXNet
 ```
 python test.py
+
+```
+- Caffe 
+```
+python test_caffe.py
+```
+
+## Evaluation
+```
 python evaluate.py
 ```
 

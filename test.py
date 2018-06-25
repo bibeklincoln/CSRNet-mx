@@ -1,3 +1,7 @@
+import os
+os.environ['PYTHONUNBUFFERED'] = '1'
+os.environ['MXNET_CUDNN_AUTOTUNE_DEFAULT'] = '0'
+os.environ['MXNET_ENABLE_GPU_P2P'] = '0'
 import mxnet as mx
 import numpy as np
 import cv2
@@ -7,8 +11,9 @@ from mutableModule import MutableModule
 from imgiter import IMGIter
 from bufferIter import BufferIter
 
-MEAN_COLOR = mx.nd.array([110.474, 118.574, 123.955]).reshape((1, 3, 1, 1)) # BGR 
 batch_size = 1
+ctx = mx.cpu(0)
+MEAN_COLOR = mx.nd.array([110.474, 118.574, 123.955]).reshape((1, 3, 1, 1)) # BGR
 
 def load_checkpoint(prefix, epoch):
     """
@@ -33,8 +38,6 @@ def load_checkpoint(prefix, epoch):
     return arg_params, aux_params
 
 sym = symbol_csrnet.get_symbol()
-
-ctx = mx.cpu(0)
 
 mod = MutableModule(
         context = ctx,
