@@ -1,0 +1,3 @@
+[submodule "vgg-mx"]
+	path = vgg-mx
+	url = git@github.com:wkcn/vgg-mx
