@@ -2,7 +2,7 @@ import caffe
 import numpy as np
 import cv2
 
-MEAN_COLOR = np.array([110.474, 118.574, 123.955]).reshape((1, 3, 1, 1)) # BGR
+MEAN_COLOR = np.array([92.8207477031, 95.2757037428, 104.877445883]).reshape((1, 3, 1, 1)) # BGR
 
 deploy = './models/deploy.prototxt'
 caffe_model = './models/shanghaia.caffemodel'

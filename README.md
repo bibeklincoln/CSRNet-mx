@@ -11,20 +11,19 @@ ShanghaiTech Dataset: [Google Drive](https://drive.google.com/open?id=16dhJn7k4F
 
 Using the official model and testing ShanghaiTech Dataset by the code:
 
-Mean Value: [110.474, 118.574, 123.955] by BGR order
+Mean Value: [92.8207477031, 95.2757037428, 104.877445883] by BGR order
 
 Testing in this repo **vs** the report of paper
 
 MAE(Part_A)|MSE(Part_A)|MAE(Part_B)|MSE(Part_B)
 ---|---|---|---
-72.189 vs 68.2|118.791 vs 115.0|17.677 vs 10.6|24.744 vs 16.0
+68.9 vs 68.2|116.1 vs 115.0|10.6 vs 10.6|16.0 vs 16.0
 
-It seems that there may be different between testing methods.
+The author used Caffe to train the model.
 
-Waiting for the right testing method the authors provided...
+I use the MXNet implementation to test so there is a little of precision error.
 
-
-
+Using Caffe to test will match the result as the paper reported.
 
 ## Models (Only for tests)
 

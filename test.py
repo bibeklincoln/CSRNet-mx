@@ -12,8 +12,8 @@ from imgiter import IMGIter
 from bufferIter import BufferIter
 
 batch_size = 1
-ctx = mx.cpu(0)
-MEAN_COLOR = mx.nd.array([110.474, 118.574, 123.955]).reshape((1, 3, 1, 1)) # BGR
+ctx = mx.gpu(0)
+MEAN_COLOR = mx.nd.array([92.8207477031, 95.2757037428, 104.877445883]).reshape((1, 3, 1, 1)) # BGR
 
 def load_checkpoint(prefix, epoch):
     """
